@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebArtesan | Création de Sites Web sur Mesure</title>
+    <!-- Lien vers une police moderne (depuis Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Styles CSS de base intégrés directement pour la simplicité --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* En-tête et navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #e67e22; /* Une touche de couleur "artisanale" */
+        }
+
+        .btn-contact {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            background-color: #e67e22;
+        }
+
+        /* Section Héros (la bannière principale) */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f9f9f9 0%, #e8f0f2 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+        }
+
+        /* Section Services */
+        .services {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Section Approche / Valeurs */
+        .values {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .values-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .values-text {
+            flex: 1;
+        }
+
+        .values-text h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .values-image {
+            flex: 1;
+            background-color: #e8f0f2;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 1.2rem;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        /* Responsive pour mobiles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .values-content {
+                flex-direction: column;
+            }
+            .values-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. En-tête avec logo et bouton contact -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Web<span>Artesan</span></a>
+                <a href="mailto:contact@webartesan.fr" class="btn-contact">Me Contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. Section Héros : accroche principale -->
+    <section class="hero">
+        <div class="container">
+            <h1>Votre site web unique,<br>façonné avec passion</h1>
+            <p>Je crée des sites internet sur-mesure, élégants et performants pour donner vie à votre projet. De l'idée à la mise en ligne, un accompagnement artisanal.</p>
+            <a href="#contact" class="btn-primary">Parlons de votre projet</a>
+        </div>
+    </section>
+
+    <!-- 3. Section Services : ce que tu proposes -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Ce que je peux faire pour vous</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Design & Création</h3>
+                    <p>Des maquettes uniques qui reflètent votre identité. Votre site ne ressemblera à aucun autre.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Développement</h3>
+                    <p>Un code propre, rapide et responsive. Votre site sera parfait sur ordinateur, tablette et mobile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Référencement & Performance</h3>
+                    <p>Les bonnes pratiques SEO dès le départ et des temps de chargement optimisés pour vos visiteurs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Suivi</h3>
+                    <p>Un site, ça vit ! Je peux le faire évoluer et assurer sa maintenance pour qu'il reste au top.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Section Valeurs : pourquoi "Artesan" -->
+    <section class="values" id="about">
+        <div class="container">
+            <div class="values-content">
+                <div class="values-text">
+                    <h2>L'esprit WebArtesan</h2>
+                    <p>Je crois en un web fait main, loin des sites génériques. Chaque projet est une nouvelle aventure où j'allie <strong>créativité</strong> et <strong>technique</strong> pour vous offrir un outil sur-mesure.</p>
+                    <p>En tant que créateur et développeur, je gère votre projet de A à Z : de la première esquisse à la mise en ligne finale. La communication est directe et transparente.</p>
+                </div>
+                <div class="values-image">
+                    [Ici, une photo de toi ou de ton espace de travail]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Pied de page -->
+    <footer>
+        <div class="container">
+            <p>© 2024 WebArtesan - Fait avec ❤️ et beaucoup de ☕️</p>
+        </div>
+    </footer>
+
+</body>
+</html>
